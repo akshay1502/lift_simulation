@@ -1,16 +1,16 @@
 import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa";
-import{ change } from './change';
 
-const Floor = ({cur_floor}) => {
-    console.log(typeof("up"+cur_floor));
+const Floor = ({floor, floorName = null, last = null}) => {
     return (
-    <div className="main">
         <div className="floor">
-            <FaArrowCircleUp className="i" size={28} onClick={() => change('up',cur_floor)} id={"up"+cur_floor} />
-            <span>{cur_floor}</span>
-            <FaArrowCircleDown className="i" size={28} onClick={() => change('down',cur_floor)} id={"down"+cur_floor} />
+            <div className="buttons">
+            {/* <FaArrowCircleUp className="i" size={28} onClick={() => change('up',floor)} id={"up"+floor} /> */}
+            {/* <FaArrowCircleDown className="i" size={28} onClick={() => change('down',floor)} id={"down"+floor} /> */}
+                {!last && <FaArrowCircleUp className="i" size={28} /> }
+                <span>{floorName || floor}</span>
+                { !floorName && <FaArrowCircleDown className="i" size={28} /> }
+            </div>
         </div>
-    </div>
     );
 }
  
