@@ -47,7 +47,14 @@ body{
   left:20%;
   display: none;
 }
+
 #lift2{
   left:40%;
   display: none;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(255, 224, 224);
+  text-align: center;
 }
